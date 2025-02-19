@@ -1,0 +1,62 @@
+<!-- <?php
+
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['admin_name'])){
+   header('location:register.php');
+}
+
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Admin Page</title>
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <header>
+      <nav class="navbar">
+         <div class="nav-left">
+               <img src="images/logo 1.png" alt="Logo" class="logo">
+         </div>
+      
+         <ul class="nav-menu">
+               <li><a href="#">Stalls</a></li>
+               <li><a href="#">Review</a></li>
+               <li><a href="#">Fave</a></li>
+         </ul>
+         
+         <div class="nav-right">
+            <a href="products/fnl_dashboard.php" class="sign-in">Profile</a>
+            <div class="sign-in-as" style="display: none;">
+               <div class="overlap-wrapper">
+                  <div class="overlap">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+   </header>
+   
+   <div class="container">
+      <div class="content">
+         <h3>hi, <span>admin</span></h3>
+         <h1>welcome <span><?php echo $_SESSION['user_name'] ?></span></h1>
+         <p>this is an admin page</p>
+         <a href="login_form.php" class="btn">login</a>
+         <a href="register_form.php" class="btn">register</a>
+         <a href="logout.php" class="btn">logout</a>
+      </div>
+   </div>
+
+</body>
+</html>
